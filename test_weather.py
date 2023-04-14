@@ -85,6 +85,10 @@ def test_create_account(driver):
     driver.execute_script("return arguments[0].scrollIntoView(true);", click_submit_btn)
     click_submit_btn.click()
 
+    click_submit_btn = driver.find_element(By.CLASS_NAME, '.btn.btn-color.btn-submit')
+    driver.execute_script("return arguments[0].scrollIntoView(true);", click_submit_btn)
+    click_submit_btn.click()
+
     time.sleep(10)
 
 
