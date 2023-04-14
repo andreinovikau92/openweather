@@ -92,16 +92,16 @@ def test_create_account(driver):
     time.sleep(10)
 
 
-# def test_click_submit_button(driver):
-#     fill_email = driver.find_element(By.CLASS_NAME, 'string.email.optional.form-control')
-#     fill_email.send_keys('test')
-# #     fill_password = driver.find_element(By.ID, '')
-#     time.sleep(2)
-#      # click_submit = driver.find_element(By.CSS_SELECTOR, 'input.btn.btn-default.btn-color')
-#      # click_submit.click()
-#      # message = driver.find_element(By.CLASS_NAME, 'panel-heading')
-#      # assert message == 'Invalid Email or password.'
-#      # time.sleep(2)
+def test_click_submit_button(driver):
+    fill_email = driver.find_element(By.CLASS_NAME, 'string.email.optional.form-control')
+    fill_email.send_keys('test')
+    fill_password = driver.find_element(By.ID, '')
+    time.sleep(2)
+    click_submit = driver.find_element(By.CSS_SELECTOR, 'input.btn.btn-default.btn-color')
+    click_submit.click()
+    message = driver.find_element(By.CLASS_NAME, 'panel-heading')
+    assert message == 'Invalid Email or password.'
+    time.sleep(2)
 
 
 
